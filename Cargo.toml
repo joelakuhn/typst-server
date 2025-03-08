@@ -1,0 +1,16 @@
+[package]
+name = "typst_server"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+
+rocket = "0.5.1"
+typst = { git = "https://github.com/typst/typst", tag = "v0.13.0" }
+typst-library = { git = "https://github.com/typst/typst", tag = "v0.13.0" }
+typst-pdf = { git = "https://github.com/typst/typst", tag = "v0.13.0" }
+csv = "*"
+memmap2 = "*"
+walkdir = "*"
+dirs = "*"
+serde_json = "*"
