@@ -40,6 +40,9 @@ fn process_request(template: Option<String>, post_body: Option<String>) -> (Stat
     if post_body.is_some() {
         typst.json(String::from("post"), post_body.unwrap());
     }
+    else {
+        typst.json(String::from("post"), String::from("{}"));
+    }
 
     match typst.compile() {
         Ok(pdf) => (Status::Ok, (ContentType::PDF, pdf)),
